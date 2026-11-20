@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stevens Parking — Know Before You Go</title>
+  <meta name="description" content="A student project to show live open-space counts for the Babbio Center Garage at Stevens. Watch our video and tell us what you think." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">P</span>
+        <span>Stevens Parking</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#video">Video</a>
+        <a href="#survey" class="btn btn-small">Take the Survey</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <p class="eyebrow">MGT 103 · Stevens Institute of Technology</p>
+      <h1>Know if there's a spot <span class="accent">before</span> you pull in.</h1>
+      <p class="lead">
+        We're building a simple way to see how many open spaces are left in the
+        Babbio Center Garage — live, from your phone. We'd love your honest feedback.
+      </p>
+      <div class="hero-actions">
+        <a href="#video" class="btn">Watch the video</a>
+        <a href="#survey" class="btn btn-ghost">Give feedback →</a>
+      </div>
+
+      <!-- Little mock "live count" card -->
+      <div class="live-card" aria-hidden="true">
+        <div class="live-head">
+          <span class="dot"></span> Babbio Center Garage
+        </div>
+        <div class="live-count"><span id="spotCount">42</span><small>spots open</small></div>
+        <div class="live-bar"><div class="live-fill" id="spotFill"></div></div>
+        <div class="live-foot">Demo preview · updates every few seconds</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STORY ========== -->
+  <section class="section" id="story">
+    <div class="container">
+      <p class="eyebrow">Our Story</p>
+      <h2>Why we started this</h2>
+
+      <div class="story-grid">
+        <div class="story-text reveal">
+          <!-- ✏️ EDIT: replace with your group's real story -->
+          <p>
+            If you've ever driven to campus for a morning class, you know the routine:
+            circle the Babbio Center Garage, climb level after level, and hope a spot opens
+            up before you're late. There's no way to know if the garage is full until
+            you're already inside it.
+          </p>
+          <p>
+            We're a group of Stevens sophomores in MGT 103, and we kept hearing the same
+            frustration from classmates, commuters and staff. So we asked a simple question:
+            <strong>what if you could check how many spots are open before you leave?</strong>
+          </p>
+          <p>
+            Our first prototype uses a phone camera at the garage entrance to count cars
+            coming in and going out. That count updates a live number you can check on your
+            phone. If it works, the next step is low-cost sensors at the entrance.
+          </p>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Count</h3>
+              <p>A camera at the entrance counts cars entering and leaving.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Update</h3>
+              <p>The open-space number updates automatically in real time.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Check</h3>
+              <p>You check it on your phone before you head to campus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✏️ EDIT: team names (or delete this block) -->
+      <div class="team reveal">
+        <h3>The team</h3>
+        <ul class="team-list" id="teamList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VIDEO ========== -->
+  <section class="section section-alt" id="video">
+    <div class="container narrow">
+      <p class="eyebrow">The Video</p>
+      <h2>See how it works</h2>
+      <p class="section-lead">A quick walkthrough of the problem, our idea, and the prototype.</p>
+
+      <div class="video-wrap reveal" id="videoWrap">
+        <!-- Filled in by script.js from VIDEO_URL -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SURVEY ========== -->
+  <section class="section" id="survey">
+    <div class="container narrow">
+      <div class="survey-card reveal">
+        <p class="eyebrow light">2 minutes of your time</p>
+        <h2>Would you actually use this?</h2>
+        <p>
+          We're trying to find out whether this solves a real problem. Tell us how you
+          park on campus, what bugs you about it, and whether a live spot count would help.
+          Honest answers — even "no" — help us the most.
+        </p>
+        <a href="#" class="btn btn-light btn-large" id="surveyBtn" target="_blank" rel="noopener">
+          Take the survey →
+        </a>
+        <p class="survey-note">Anonymous · takes about 2 minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Stevens Parking · MGT 103 student project</span>
+      <span>Stevens Institute of Technology, Hoboken NJ</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
